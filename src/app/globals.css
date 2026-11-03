@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cinzel: 'Cinzel', serif;
+  --font-outfit: 'Outfit', sans-serif;
+  --bg-primary: #FDFBF7;
+  --bg-dark: #1F1F1F;
+}
+
+html {
+  background-color: #2A060B;
+  overscroll-behavior-y: none;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: #1F1F1F;
+  font-family: var(--font-outfit);
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+/* Prevent ghost dragging on images/links that triggers downwards auto-scrolling */
+img,
+a {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+/* Custom Royal Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F9F5EC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9A7936;
+}
+
+/* Selection Color */
+::selection {
+  background-color: #58111A;
+  color: #F7F0D4;
+}
+
+/* Shimmer Animation Keyframe Utility */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #F7F0D4 50%, #C5A059 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
